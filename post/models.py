@@ -13,6 +13,7 @@ from django.db.models.signals import post_save
 
 User = get_user_model()
 class Category(models.Model):
+    # creating a model for category 
     name = models.CharField(max_length = 100, unique=True, null=True)
     category_slug = models.SlugField(max_length = 100, unique= True, blank =True, null = True)
 
