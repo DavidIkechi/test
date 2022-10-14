@@ -3,6 +3,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 
 class CreateUserForm(UserCreationForm):
+    # creating a nice form using widgets.
     first_name = forms.CharField(required = True,label='First Name', widget= forms.TextInput(
         attrs={'class': 'input','id' :'', 'placeholder':'First Name'}
     ))
